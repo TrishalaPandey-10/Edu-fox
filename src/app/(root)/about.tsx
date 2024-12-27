@@ -2,17 +2,17 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 
-const Home: React.FC = () => {
+const About: React.FC = () => {
   return (
-    <div className="bg-[#1B262C] min-h-screen text-[#BBE1FA]">
+    <div className="bg-[#BBE1FA] min-h-screen text-[#1B262C]">
       <header className="flex justify-between items-center p-4">
         <div className="flex items-center">
           <Link href="/" legacyBehavior>
             <a className="text-[#BBE1FA] text-xl font-bold">EduFox</a>
           </Link>
         </div>
-        <nav className="bg-[#0F4C75] shadow-md p-4 rounded-2xl flex items-center space-x-8">
-          <ul className="flex items-center space-x-8">
+        <nav className="bg-[#0F4C75] shadow-md p-4 rounded-lg flex items-center space-x-4">
+          <ul className="flex items-center space-x-4">
             <li>
               <Link href="/" legacyBehavior>
                 <a className="hover:underline text-[#BBE1FA]">Home</a>
@@ -44,11 +44,29 @@ const Home: React.FC = () => {
           </Link>
         </div>
       </header>
-      <main className="flex flex-col items-center justify-center min-h-screen p-8">
-        <h1 className="text-4xl font-bold mb-8 text-center">Welcome to EduFox!</h1>
+      <main className="p-8">
+        <h1 className="text-4xl font-bold mb-8 text-center text-[#1B262C]">About Us</h1>
+        <div className="bg-[#0F4C75] p-4 mb-8 text-[#BBE1FA] rounded-lg">
+          <p>About us content goes here...</p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          {Array.from({ length: 5 }).map((_, index) => (
+            <div key={index} className="bg-[#0F4C75] p-4 text-[#1B262C] rounded-lg">
+              <Image
+                src="/profile.png" 
+                alt="Developer Image"
+                width={150}
+                height={150}
+                className="mb-4 rounded-full"
+              />
+              <h2 className="font-bold">Developer Name</h2>
+              <p>Developer details go here...</p>
+            </div>
+          ))}
+        </div>
       </main>
     </div>
   );
 };
 
-export default Home;
+export default About;
