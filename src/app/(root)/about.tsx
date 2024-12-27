@@ -11,8 +11,8 @@ const About: React.FC = () => {
             <a className="text-[#BBE1FA] text-xl font-bold">EduFox</a>
           </Link>
         </div>
-        <nav className="bg-[#0F4C75] shadow-md p-4 rounded-lg flex items-center space-x-4">
-          <ul className="flex items-center space-x-4">
+        <nav className="bg-[#0F4C75] shadow-md p-4 rounded-2xl flex items-center space-x-8">
+          <ul className="flex items-center space-x-8">
             <li>
               <Link href="/" legacyBehavior>
                 <a className="hover:underline text-[#BBE1FA]">Home</a>
@@ -53,7 +53,7 @@ const About: React.FC = () => {
           {Array.from({ length: 5 }).map((_, index) => (
             <div key={index} className="bg-[#0F4C75] p-4 text-[#1B262C] rounded-lg">
               <Image
-                src="/profile.png" 
+                src="/path-to-image.jpg" // Replace with actual image paths
                 alt="Developer Image"
                 width={150}
                 height={150}
