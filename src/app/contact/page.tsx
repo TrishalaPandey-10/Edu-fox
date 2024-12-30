@@ -46,7 +46,7 @@ const Contact: React.FC = () => {
       </header>
       <main className="p-8">
         <h1 className="text-4xl font-bold mb-8 text-center text-[#BBE1FA]">Contact</h1>
-        <div className="bg-[#BBE1FA] p-8 rounded-lg">
+        <div className="bg-[#BBE1FA] p-8 rounded-lg max-w-md mx-auto">
           <div className="mb-4">
             <label htmlFor="email" className="block text-[#0F4C75] mb-2">Email Address</label>
             <input type="email" id="email" className="w-full p-2 bg-[#0F4C75] text-[#BBE1FA] rounded-md"/>
